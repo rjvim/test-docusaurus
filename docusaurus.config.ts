@@ -10,7 +10,7 @@ console.log(
 );
 
 const config: Config = {
-  title: "My Site Main 6",
+  title: "My Site Main 7",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -18,7 +18,10 @@ const config: Config = {
   url: "https://rjvim.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/test-docusaurus/",
+  baseUrl:
+    process.env.PR_NUMBER_2 !== undefined
+      ? "/test-docusaurus/pr-preview/pr-" + process.env.PR_NUMBER_2
+      : "/test-docusaurus/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
