@@ -2,8 +2,15 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+console.log(
+  "BASE_URL:",
+  process.env.BASE_URL,
+  process.env.PR_NUMBER,
+  process.env.PR_NUMBER_2
+);
+
 const config: Config = {
-  title: "My Site Main 6",
+  title: "My Site Main 7",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -11,7 +18,10 @@ const config: Config = {
   url: "https://rjvim.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/test-docusaurus/",
+  baseUrl:
+    process.env.PR_NUMBER_2 !== undefined
+      ? "/test-docusaurus/pr-preview/pr-" + process.env.PR_NUMBER_2
+      : "/test-docusaurus/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
