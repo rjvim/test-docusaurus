@@ -2,7 +2,12 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-console.log("BASE_URL:", process.env.BASE_URL, process.env.PR_NUMBER);
+console.log(
+  "BASE_URL:",
+  process.env.BASE_URL,
+  process.env.PR_NUMBER,
+  process.env.PR_NUMBER_2
+);
 
 const config: Config = {
   title: "My Site Main 6",
