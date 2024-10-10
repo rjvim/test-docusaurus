@@ -11,8 +11,7 @@ jobs:
   deploy:
     name: Deploy Docusaurus
     env:
-      GIT_USER: ${{ github.actor }}
-      GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
+      USE_SSH: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
