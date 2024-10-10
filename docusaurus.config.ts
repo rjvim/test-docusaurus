@@ -2,6 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+console.log("BASE_URL:", process.env.BASE_URL);
+
 const config: Config = {
   title: "My Site Main 6",
   tagline: "Dinosaurs are cool",
